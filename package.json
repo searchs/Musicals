@@ -1,0 +1,21 @@
+{
+  "name": "exproo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "fetch": "^1.1.0",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "supertest": "^6.2.2"
+  }
+}
