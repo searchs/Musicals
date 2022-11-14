@@ -4,6 +4,7 @@ const path = require('path');
 const friendsRouter = require('./router/friends.router');
 const messagesRouter = require('./router/messages.router');
 const eventsRouter = require('./router/events.router');
+const showsRouter = require('./router/shows.router');
 const segmentsRouter = require('./router/segments.router');
 const sessionsRouter = require('./router/sessions.router');
 
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use('/friends', friendsRouter);
 app.use('/messages', messagesRouter);
 app.use('/events', eventsRouter);
+app.use('/shows', showsRouter);
 app.use('/segments', segmentsRouter);
 app.use('/sessions', sessionsRouter);
 
