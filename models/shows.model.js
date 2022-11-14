@@ -32,7 +32,7 @@ const showsModel = [
     eventStarts: '10.00am',
     eventEnds: '12:15pm',
     eventStatus: 'Upcoming',
-    eventLocation: 'London',
+    eventLocation: 'Greenford London UB1 ',
     segments: [],
     cover:
       'https://static01.nyt.com/images/2020/11/24/world/24moose-lick/24moose-lick-superJumbo.jpg?quality=75&auto=webp'
