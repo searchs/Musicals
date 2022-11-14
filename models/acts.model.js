@@ -1,4 +1,4 @@
-const friends = [
+const acts = [
   { id: 9, name: 'Albert Einstein' },
   { id: 1, name: 'Sir isaac Newton' },
   { id: 2, name: 'Grace Hooper' },
@@ -10,4 +10,4 @@ const friends = [
   { id: 8, name: 'Nathaneil Bassey' }
 ];
 
-module.exports = friends;
+module.exports = acts;

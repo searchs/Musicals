@@ -1,4 +1,4 @@
-const sessionsModel = [
+const intervalsModel = [
   {
     id: 1,
     title: 'Weekly Announcements',
@@ -22,4 +22,4 @@ const sessionsModel = [
   }
 ];
 
-module.exports = sessionsModel;
+module.exports = intervalsModel;

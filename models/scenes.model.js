@@ -1,4 +1,4 @@
-const segmentsModel = [
+const scenesModel = [
   {
     id: 1,
     name: 'Morning Session',
@@ -28,4 +28,4 @@ const segmentsModel = [
   }
 ];
 
-module.exports = segmentsModel;
+module.exports = scenesModel;

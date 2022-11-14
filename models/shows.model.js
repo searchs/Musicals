@@ -1,4 +1,4 @@
-const eventsModel = [
+const showsModel = [
   {
     id: 1,
     title: 'Making cakes with metals',
@@ -7,6 +7,7 @@ const eventsModel = [
     eventEnds: '12:15pm',
     eventStatus: 'Upcoming',
     eventLocation: 'London',
+    created: '02*05*2022 12:45:10',
     segments: ['segmentId_1']
   },
   {
@@ -31,4 +32,4 @@ const eventsModel = [
   }
 ];
 
-module.exports = eventsModel;
+module.exports = showsModel;
