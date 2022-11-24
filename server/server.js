@@ -1,17 +1,21 @@
 const express = require('express');
 const path = require('path');
 
-const friendsRouter = require('./router/friends.router');
 const messagesRouter = require('./router/messages.router');
 const eventsRouter = require('./router/events.router');
 const showsRouter = require('./router/shows.router');
-const segmentsRouter = require('./router/segments.router');
+const actsRouter = require('./router/acts.router');
 const sessionsRouter = require('./router/sessions.router');
+const scenesRouter = require('./router/scenes.router');
 
 const app = express();
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 const PORT = process.env.PORT || 3000;
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -24,12 +28,13 @@ app.use((req, res, next) => {
 
 app.use('/travels', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use('/friends', friendsRouter);
+// app.use('/friends', friendsRouter);
 app.use('/messages', messagesRouter);
 app.use('/events', eventsRouter);
 app.use('/shows', showsRouter);
-app.use('/segments', segmentsRouter);
+app.use('/acts', actsRouter);
 app.use('/sessions', sessionsRouter);
+app.use('/scenes', scenesRouter);
 
 app.get('/blog', (req, res) => {
   res.render('index', {
@@ -39,9 +44,10 @@ app.get('/blog', (req, res) => {
 });
 app.get('/', (req, res) => {
   return res.json({
-    appServer: '0.1.1',
-    description: 'Ultimate Express JS app',
-    company: 'soocreative'
+    appVersion: '0.2.1',
+    name: 'StageFlow',
+    description: 'Musical Stage Management App ',
+    company: 'Soft Creative Ltd'
   });
 });
 

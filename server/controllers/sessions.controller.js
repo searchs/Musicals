@@ -1,4 +1,4 @@
-const sessionsModel = require('../models/sessions.model');
+const sessionsModel = require('../models/sessions.model.js');
 
 function postSession(req, res) {
   if (!req.body.name) {
